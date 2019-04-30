@@ -121,6 +121,7 @@ public class podHomeBean {
 		private String displayDateRevise;
 		private Date editDate;
 		private String title;
+		private String category;
 		private String description;
 		private String size;
 		private String type;
@@ -204,6 +205,14 @@ public class podHomeBean {
 
 		public void setTitle(String title) {
 			this.title = title;
+		}
+		// ONOH
+			public String getCategory() {
+			return category;
+		}
+
+		public void setCategory(String category) {
+			this.category = category;
 		}
 
 		/** Returns this podcast's content MIME type ***/
@@ -373,6 +382,7 @@ public class podHomeBean {
 	private String filename = "";
 	private String date = "";
 	private String title;
+	private String category;
 	private String description;
 	private String email;
 	private long fileSize = 0;
@@ -639,7 +649,7 @@ public class podHomeBean {
 			// store resourceId
 			podcastInfo.setResourceId(podcastResource.getId());
 
-			// store Title and Description
+			// store Title and Description and category
 			podcastInfo.setTitle(podcastProperties
 								.getPropertyFormatted(ResourceProperties.PROP_DISPLAY_NAME));
 			podcastInfo.setDescription(podcastProperties
@@ -956,6 +966,14 @@ public class podHomeBean {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getDescription() {

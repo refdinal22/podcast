@@ -80,7 +80,23 @@
 	 	  </tr>
 	 	  <tr>
 			<td colspan="3"><h:outputText value="#{msgs.notitle_alert}" styleClass="alertMessage" rendered="#{podHomeBean.displayNoTitleErrMsg}" /></td>
-	      </tr>
+				</tr>
+				
+
+				<tr>  <!-- ****** Category ****** -->
+					<td class="reqStarInline">*</td>
+					<td><label for="podAdd:podcategory"><h:outputText value="#{msgs.category_prompt}" /></label></td>
+					<td><h:selectOneMenu value="#{podHomeBean.category}">
+							<f:selectItem itemValue="Cream Latte" itemLabel="Coffee3 - Cream Latte" />
+   						<f:selectItem itemValue="Extreme Mocha" itemLabel="Coffee3 - Extreme Mocha" />
+   						<f:selectItem itemValue="Buena Vista" itemLabel="Coffee3 - Buena Vista" />
+					</h:selectOneMenu></td><!-- <td><h:inputText id="podcategory" value="#{podHomeBean.category}" size="35" maxlength="255" /></td> -->
+				 </tr>
+				 <tr>
+				<td colspan="3"><h:outputText value="#{msgs.notitle_alert}" styleClass="alertMessage" rendered="#{podHomeBean.displayNoTitleErrMsg}" /></td>
+					</tr>
+
+
           <tr> <!-- ****** Description ****** -->
       		<td colspan="2"><label for="podAdd:poddescription"><h:outputText value="#{msgs.description_prompt}" /></label></td>
       	  </tr>
